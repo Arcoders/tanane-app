@@ -1,0 +1,11 @@
+@import "./base/variables";
+
+body {
+    font-family: $font-family;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/green-poke.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
