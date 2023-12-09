@@ -5,7 +5,7 @@ The Poke App is designed to manage and display Pokémon-related data. It utilize
 
 [Live preview - click here!](https://poke-tanane-app-demo.surge.sh/)
 
-Screenshots in case the demo site is broken
+Screenshots in case the demo site is broken.
 
 * Classic pagination:
 ![Alt Text](./docs/img/default.png)
