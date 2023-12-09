@@ -3,7 +3,9 @@
 The Poke App is designed to manage and display Pokémon-related data. It utilizes React, TypeScript, and uses `tanane-lib` to create a user-friendly interface for browsing Pokémon details.
 ## Demo
 
-[Live preview](https://poke-tanane-app-demo.surge.sh/)
+[Live preview - click here!](https://poke-tanane-app-demo.surge.sh/)
+
+Screenshots in case the demo site is broken
 
 * Classic pagination:
 ![Alt Text](./docs/img/default.png)
