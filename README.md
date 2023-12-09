@@ -71,9 +71,17 @@ A couple of hooks (usePokemonList, usePokemon) are employed for handling Pokémo
 
 ---
 
+## Styling
+
+The SCSS variables maintain consistent styling throughout the app, defining colors, typography, spacing, and other design-related properties.
+
+I utilized Beem for managing classnames.
+
+---
+
 ## TypeScript Configuration (tsconfig.json).
 
--The TypeScript configuration file (tsconfig.json) for the project specifies compiler options and settings:
+The TypeScript configuration file (tsconfig.json) for the project specifies compiler options and settings:
 
 * Target Environment: Sets the target environment to ES2020, enabling certain language features.
 
