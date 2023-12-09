@@ -1,8 +1,8 @@
-# Poke App ^_^ made with love.
+# Poke App - made with love  ^_^
 
 The Poke App is designed to manage and display Pokémon-related data. It utilizes React, TypeScript, and uses `tanane-lib` to create a user-friendly interface for browsing Pokémon details.
 :
-## Demo
+## Demo:
 * Classic pagination:
 ![Alt Text](./docs/img/default.png)
 
