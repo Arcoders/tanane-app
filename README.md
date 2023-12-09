@@ -1,7 +1,7 @@
-# Poke App
+# Poke App ^_^ made with love.
 
 The Poke App is designed to manage and display Pokémon-related data. It utilizes React, TypeScript, and uses `tanane-lib` to create a user-friendly interface for browsing Pokémon details.
-
+:
 ## Demo
 * Classic pagination:
 ![Alt Text](./docs/img/default.png)
@@ -13,7 +13,7 @@ The Poke App is designed to manage and display Pokémon-related data. It utilize
 ![Alt Text](./docs/img/details.png)
 
 ---
-## Installation
+## Installation:
 
 Clone this repository and navigate to the project directory:
 
@@ -23,7 +23,7 @@ cd tanane-app
 npm install 
 ```
 
-## Usage
+## Usage:
 To run the app locally:
 
 ```bash
@@ -32,7 +32,7 @@ npm run dev
 
 ---
 
-## Routing
+## Routing:
 
 The app utilizes React Router for navigation. Here's an overview of the routes:
 
@@ -42,7 +42,7 @@ The app utilizes React Router for navigation. Here's an overview of the routes:
 
 ---
 
-## Application Structure
+## Application Structure:
 
 The main application resides in `App.js`, managing routing between two components.
 The `Home` component is a landing page displaying a paginated list of Pokémon.
@@ -53,7 +53,7 @@ Utilizes the `PokemonList` component to display the Pokémon list.
 
 ---
 
-## Pokemon Service.
+## Pokemon Service:
 
 Contains methods for listing and finding Pokémon, utilizing the fetchUrl function to make `GET` HTTP requests.
 Fetches a list of Pokémon and details for individual Pokémon.
@@ -65,13 +65,13 @@ Fetches a list of Pokémon and details for individual Pokémon.
 
 ---
 
-## Hooks, Components, and Data Management.
+## Hooks, Components, and Data Management:
 
 A couple of hooks (usePokemonList, usePokemon) are employed for handling Pokémon-related data. These hooks are integral in providing data to the user interface.
 
 ---
 
-## Styling.
+## Styling:
 
 The SCSS variables maintain consistent styling throughout the app, defining colors, typography, spacing, and other design-related properties.
 
@@ -79,7 +79,7 @@ I utilized Beem for managing classnames.
 
 ---
 
-## TypeScript Configuration (tsconfig.json).
+## TypeScript Configuration (tsconfig.json):
 
 The TypeScript configuration file (tsconfig.json) for the project specifies compiler options and settings:
 
@@ -93,7 +93,7 @@ The tsconfig.json file ensures proper compilation, bundling, and strict type che
 
 ---
 
-## TypeScript Types
+## TypeScript Types:
 
 The application uses TypeScript types/interfaces to define the shape of different data structures related to Pokémon. These types include:
 
@@ -116,7 +116,7 @@ These TypeScript types/interfaces ensure consistent data structures and help mai
 
 ---
 
-## Contributing.
+## Contributing:
 
 Contributions to the App are welcome! Feel free to submit issues or pull requests.
 
