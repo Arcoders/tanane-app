@@ -19,8 +19,8 @@ const PokemonDetail = () => {
         <h1 className="detail__title">{pokemon.name}</h1>
         <img className="detail__image" src={pokemon.image} alt={pokemon.name} />
         <div className="detail__info">
-          <p>Height: {pokemon.height / 10} meters</p>
-          <p>Weight: {pokemon.weight / 10} kilograms</p>
+          <p>Height: {pokemon.height} meters</p>
+          <p>Weight: {pokemon.weight} kilograms</p>
           <p>Abilities: {pokemon.abilities}</p>
           <p>Types: {pokemon.types}</p>
         </div>
