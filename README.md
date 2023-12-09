@@ -71,7 +71,7 @@ A couple of hooks (usePokemonList, usePokemon) are employed for handling Pokémo
 
 ---
 
-## Styling
+## Styling.
 
 The SCSS variables maintain consistent styling throughout the app, defining colors, typography, spacing, and other design-related properties.
 
