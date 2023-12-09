@@ -1,6 +1,6 @@
 # Poke App
 
-The Poke App is designed to manage and display Pokémon-related data. It utilizes React, TypeScript, and uses `tanane-lib` library to create a user-friendly interface for browsing Pokémon details.
+The Poke App is designed to manage and display Pokémon-related data. It utilizes React, TypeScript, and uses `tanane-lib` to create a user-friendly interface for browsing Pokémon details.
 
 ## Demo
 * Classic pagination:
@@ -44,7 +44,7 @@ The app utilizes React Router for navigation. Here's an overview of the routes:
 
 ## Application Structure
 
-The main application logic resides in `App.js`, managing routing between different components.
+The main application resides in `App.js`, managing routing between two components.
 The `Home` component is a landing page displaying a paginated list of Pokémon.
 
 Utilizes `PokemonProvider` for context management.
@@ -79,7 +79,8 @@ A couple of hooks (usePokemonList, usePokemon) are employed for handling Pokémo
 
 * Module Resolution: Configures module resolution to "bundler" mode for better compatibility with bundlers.
 
-* Linting: Enforces strict type checking and various linting rules (strict, noUnusedLocals, noUnusedParameters, noFallthroughCasesInSwitch).
+* Linting: Enforces strict type checking and various linting rules.
+
 The tsconfig.json file ensures proper compilation, bundling, and strict type checking for the project.
 
 ---
@@ -109,4 +110,6 @@ These TypeScript types/interfaces ensure consistent data structures and help mai
 
 ## Contributing.
 
-Contributions to Tanane App are welcome! Feel free to submit issues or pull requests.
+Contributions to the App are welcome! Feel free to submit issues or pull requests.
+
+This is the first approach and iteration, and I'm eager to receive feedback to improve and refine it.
