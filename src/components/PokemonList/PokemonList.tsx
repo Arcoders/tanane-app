@@ -1,33 +1,24 @@
-import { useNavigate } from "react-router-dom";
+import { Alert } from 'tanane-lib-ui';
 
 import PokemonCard from "../PokemonCard";
-import Pagination from "../Pagination";
-import usePokemonList from "../../hooks/usePokemonList";
+import Skeleton from '../Skeleton';
+import { usePokemonData } from '../context/usePokemonData';
+import { TPokemon } from "../../types";
 import './PokemonList.scss'
 
-function PokemonList() {
-  const navigate = useNavigate();
+const PokemonList = () => {
+  const data = usePokemonData();
 
-  const { data: { pokemons, count }, setCurrentPage, currentPage } = usePokemonList()
+  if (!data) return null;
 
-  const navigateTo = (page: number) => {
-    navigate(`/?page=${page}`);
-    setCurrentPage(page)
-  }
+  const { data: { pokemons }, error, loading, page: { itemsPerPage } } = data;
 
   return (
     <>
-      <Pagination
-        totalPages={count}
-        activePage={currentPage}
-        paginationPagesPerSide={3}
-        handleOnPageChange={({ currentPage }) => navigateTo(currentPage)}
-      />
-
+      <Alert message={error?.message} variant="danger" />
       <div className="list">
-        {pokemons.map((pokemon: any) => (
-          <PokemonCard {...pokemon} key={pokemon.name} />
-        ))}
+        <Skeleton length={itemsPerPage} display={loading || !!error} modifier="list--card" />
+        {pokemons.map((pokemon: TPokemon) => (<PokemonCard {...pokemon} key={pokemon.name} />))}
       </div>
     </>
   );

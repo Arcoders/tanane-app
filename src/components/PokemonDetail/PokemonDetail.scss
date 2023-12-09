@@ -1,34 +1,75 @@
+@import "@vars";
+
 .detail {
+    padding: $padding-base * 2;
+    background-color: $smoke;
+    border-radius: $border-radius;
+    box-shadow: $default_shadow;
+    width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
-    width: 500px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    position: relative;
 
-    &-back {
+    button {
         position: absolute;
-        top: 10px;
-        left: 10px;
-        padding: 20px;
-        background-color: white;
-        border-radius: 50%;
-        cursor: pointer;
-        font-size: 1.5rem;
+        top: 0;
+        left: 0;
+        padding:  $padding-base * 2;
+        margin: $margin-base;
+        font-size: 2rem;
     }
 
-    &-title {
-        text-align: center;
-        font-family: "Luckiest Guy";
-        font-weight: 900;
+    &__title {
+        font-size: $font-size-base * 2;
+        color: $primary-color;
+        text-transform: capitalize;
+        margin-top: 0;
     }
 
-    &-image {
-        height: 200px;
+    &__image {
         width: 200px;
+        height: 200px;
+        object-fit: contain;
+        margin-bottom: 20px;
+        border: 10px solid #fff;
+        border-radius: 50%;
+        box-shadow: $default_shadow;
+        :after {
+            content: "\2639" " " attr(alt);
+       
+            font-size: 18px;
+            color: rgb(100, 100, 100);
+       
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 5px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+       }
+    }
+
+    &__info {
+        width: 100%;
+        margin-bottom: $margin-base;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        p {
+            background-color: white;
+            width: 100%;
+            text-align: center;
+            padding: $padding-base 0;
+            margin: 5px;
+            display: flex;
+            justify-content: space-evenly;
+            border-radius: $border-radius;
+        }
+    }
+    &--card {
+        height: 500px;
     }
 }

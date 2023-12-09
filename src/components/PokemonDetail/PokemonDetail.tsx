@@ -1,34 +1,31 @@
 import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from 'react-icons/fa';
+import { Button, Alert } from 'tanane-lib-ui';
 
 import usePokemon from "../../hooks/usePokemon";
+import Skeleton from "../Skeleton";
 import './PokemonDetail.scss'
 
 const PokemonDetail = () => {
   const navigate = useNavigate()
-  const { pokemon, loading, error } = usePokemon();
-
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
-  if (!pokemon) return <div>Pokemon not found.</div>;
-
-  const abilities = pokemon.abilities.map((ability: any) => ability.ability.name).join(', ');
-  const types = pokemon.types.map((type: any) => type.type.name).join(', ');
-
+  const { pokemon, error, loading } = usePokemon();
 
   return (
-    <>
-      <div className="detail">
-        <span className="detail-back" onClick={() => navigate(-1)}><FaChevronLeft /></span>
-        <h1 className="detail-itle">{pokemon.name}</h1>
-        <img className="detail-image" src={pokemon.sprites.front_default} alt={pokemon.name} />
-        <p>Height: {pokemon.height / 10} meters</p>
-        <p>Weight: {pokemon.weight / 10} kilograms</p>
-        <p>Abilities: {abilities}</p>
-        <p>Types: {types}</p>
-      </div>
-    </>
+    <div className="detail">
+      <Alert message={error?.message} variant="danger" />
+      <Skeleton display={loading || !!error} modifier="detail--card" />
+      {pokemon && <>
+        <Button variant="text" onClick={() => navigate(-1)}><FaChevronLeft /></Button>
+        <h1 className="detail__title">{pokemon.name}</h1>
+        <img className="detail__image" src={pokemon.image} alt={pokemon.name} />
+        <div className="detail__info">
+          <p>Height: {pokemon.height / 10} meters</p>
+          <p>Weight: {pokemon.weight / 10} kilograms</p>
+          <p>Abilities: {pokemon.abilities}</p>
+          <p>Types: {pokemon.types}</p>
+        </div>
+      </>}
+    </div>
 
   );
 };

@@ -1,0 +1,22 @@
+@import "@vars";
+
+.pagination {
+    background-color: $white;
+    padding: $padding-base;
+    border-radius: $border-radius;
+    box-shadow: $default_shadow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-width: 200px;
+    @media (max-width: 901px) {
+        div {
+            flex-direction: column;
+          }
+    }
+      &--toggle {
+        position: absolute;
+        top: -40px;
+      }
+}

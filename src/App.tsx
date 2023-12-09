@@ -1,14 +1,20 @@
 import { Routes, Route, HashRouter as Router } from "react-router-dom";
-import PokemonList from "./components/PokemonList";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 import PokemonDetail from "./components/PokemonDetail";
+import Home from "./components/Home";
+
+const queryClient = new QueryClient()
 
 function App() {
   return (
     <Router>
+      <QueryClientProvider client={queryClient}>
         <Routes>
-          <Route path="/" element={<PokemonList />} />
+          <Route path="/" element={<Home />} />
           <Route path="/:pokeId" element={<PokemonDetail />} />
         </Routes>
+        </QueryClientProvider>
     </Router>
   );
 }

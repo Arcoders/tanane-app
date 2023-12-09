@@ -1,24 +1,18 @@
-// Colors
-$primary-color: #007bff;
-$secondary-color: #6c757d;
+$primary-color: #35cecf;
 $accent-color: #ff9900;
+$smoke: #f7f7f7;
+$white: #FFFFFF;
+$bg: #D3E9F3;
 
-// Typography
 $font-family: 'Roboto', sans-serif;
-$font-size-base: 16px;
+$font-size-base: 18px;
 $line-height-base: 1.5;
 
-// Spacing
 $spacing-unit: 8px;
-$padding-base: $spacing-unit * 2;
+$padding-base: $spacing-unit;
 $margin-base: $spacing-unit * 3;
 
-// Border radius
-$border-radius: 10px;
+$border-radius: 5px;
 
-// Shadows
-$default_shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-
-// Z-index
-$z-index-modal: 2000;
+$default_shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 

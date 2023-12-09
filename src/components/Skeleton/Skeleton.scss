@@ -1,0 +1,30 @@
+@import "@vars";
+
+.skeleton {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    border-radius: $border-radius;
+  }
+  
+  @keyframes placeHolderShimmer {
+    0% {
+      opacity: 0.5;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
+  .skeleton__background {
+    border-radius: $border-radius;
+    animation-name: placeHolderShimmer;
+    animation: placeHolderShimmer 2s infinite linear;
+    background: $white;
+    height: 100%;
+  }

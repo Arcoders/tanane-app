@@ -1,33 +1,42 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
-import Poke from "../api";
+import { useQuery } from "@tanstack/react-query";
+
+import { Pokemon } from "../api";
+import { TPokemonDetails } from "../types";
+import ballImage from "../assets/ball.png";
 
 const usePokemon = () => {
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<any>(null);
-  const [pokemon, setPokemon] = useState<any>(null);
   const { pokeId } = useParams();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const pokemonData = await Poke.find(pokeId);
-        setPokemon(pokemonData);
-        setLoading(false);
-      } catch (error) {
-        setError(error);
-        setLoading(false);
-      }
-    };
+  const { data: pokemon, isLoading: loading, error } = useQuery<TPokemonDetails>({
+    queryFn: () => Pokemon.find(pokeId),
+    queryKey: ['pokemonDetails', pokeId],
+  })
 
-    if(pokeId) fetchData();
-  }, [pokeId]);
-
-  return {
-    pokemon,
-    loading,
-    error,
-  };
+  return { loading, pokemon: buildPokemonData(pokemon), error };
 };
 
 export default usePokemon;
+
+const buildPokemonData = (pokemon?: TPokemonDetails) => {
+  if (!pokemon) return null;
+
+  const abilities = pokemon.abilities?.map(({ ability }) => ability.name).join(', ');
+  const types = pokemon.types?.map(({ type }) => type.name).join(', ');
+
+  const image =
+    pokemon.sprites?.other &&
+    pokemon.sprites.other['official-artwork']?.front_default ||
+    pokemon.sprites?.front_default || ballImage;
+
+  const formattedData = {
+    abilities,
+    types,
+    image,
+    name: pokemon.name?.split('-')[0],
+    height: Math.round((pokemon.height / 10)),
+    weight: Math.round((pokemon.weight / 10))
+  };
+
+  return formattedData;
+};

@@ -1,27 +1,24 @@
+@import "@vars";
+
 .list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    position: relative;
-  
-    @media screen and (max-width: 1024px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  
-    @media screen and (max-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    grid-gap: 20px;
+  display: grid;
+  margin-top: $margin-base;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .pagination-button {
-    height: 50px;
-    width: 50px;
-    background-color: white;
-    border: 0;
-    outline: 0;
-    padding: 10px;
-    border-radius: 20px;
-    margin: 10px;
-    cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
   }
+
+  grid-gap: 20px;
+
+  &--card {
+    width: 200px;
+    height: 200px;
+  }
+}
+
