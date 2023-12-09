@@ -34,8 +34,8 @@ const buildPokemonData = (pokemon?: TPokemonDetails) => {
     types,
     image,
     name: pokemon.name?.split('-')[0],
-    height: Math.round((pokemon.height / 10)),
-    weight: Math.round((pokemon.weight / 10))
+    height: Math.ceil((pokemon.height / 10)),
+    weight: Math.ceil((pokemon.weight / 10))
   };
 
   return formattedData;
