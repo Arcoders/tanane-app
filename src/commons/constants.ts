@@ -1,4 +1,4 @@
 export const DOMAIN_API = "https://pokeapi.co/api/v2/pokemon";
 export const DEFAULT_ERROR_MESSAGE = "The data could not be loaded :(";
 
-export const ITEMS_PER_PAGE = 12;
+export const ITEMS_PER_PAGE = 10;
